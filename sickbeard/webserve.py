@@ -1266,6 +1266,7 @@ class ConfigProviders:
                       dtt_norar = None, dtt_single = None,
                       thepiratebay_trusted=None, thepiratebay_proxy=None, thepiratebay_proxy_url=None,
                       torrentleech_username=None, torrentleech_password=None,
+		      torrentday_username = None, torrentday_password = None, torrentday_rsshash = None, torrentday_uid = None,
                       iptorrents_username=None, iptorrents_password=None, iptorrents_freeleech=None,
                       kat_trusted = None, kat_verified = None,
                       newzbin_username=None, newzbin_password=None,
@@ -1342,6 +1343,8 @@ class ConfigProviders:
                 sickbeard.TVTORRENTS = curEnabled
             elif curProvider == 'torrentleech':
                 sickbeard.TORRENTLEECH = curEnabled
+	    elif curProvider == 'torrentday':
+                sickbeard.TORRENTDAY = curEnabled
             elif curProvider == 'btn':
                 sickbeard.BTN = curEnabled
             elif curProvider in newznabProviderDict:
@@ -1400,6 +1403,11 @@ class ConfigProviders:
         
         sickbeard.TORRENTLEECH_USERNAME = torrentleech_username
         sickbeard.TORRENTLEECH_PASSWORD = torrentleech_password    
+
+        sickbeard.TORRENTDAY_USERNAME = torrentday_username
+        sickbeard.TORRENTDAY_PASSWORD = torrentday_password
+        sickbeard.TORRENTDAY_RSSHASH = torrentday_rsshash
+        sickbeard.TORRENTDAY_UID = torrentday_uid
 
         sickbeard.IPTORRENTS_USERNAME = iptorrents_username.strip()
         sickbeard.IPTORRENTS_PASSWORD = iptorrents_password.strip()
